@@ -1,0 +1,27 @@
+Aufgabe
+=======
+
+Erstellen Sie einen Netzwerk-Client, der per TCP zum Server
+
+calc.sysv.de (Port 31338)
+
+verbindet. Die IP können Sie entweder Hard-Coden oder (besser) dynamisch mit getaddrinfo() abfragen.
+
+Das Protokoll zum Server ist zeilenbasiert.
+
+Sobald Sie verbunden sind, schicken Sie eine Begrüßung
+"HELLO <name>"
+wobei Sie einen selbstgewählten Namen nehmen dürfen.
+Anschliessend sendet Ihnen der Server Rechenaufgaben, die Ihr Client automatisiert beantworten soll.
+Die Aufgaben haben die Form
+
+<nr> <op> <nr>
+
+wobei gilt 0 < nr < 999999 und op = '+' oder op = '-'
+
+Ihr Client soll das Ergebnis berechnen und in einer eigenen Zeile an
+den Server zurückschicken. Bei einem Fehler liefert der Server "ERROR"
+und schliesst die Verbindung. Wenn Ihr Client eine gewisse Anzahl an
+Aufgaben gelöst hat, sendet der Server "CONGRATULATION" und schliesst
+ebenfalls die Verbindung. Ihr gewählter Name wird dann im System hinterlegt.
+

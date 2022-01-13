@@ -9,7 +9,7 @@
 #include <netdb.h>
 
 int calc (char *s) {
-  int result;
+  int result = 0;
 
   // Calculate the result of the operation here
 
